@@ -21,6 +21,7 @@ public class MyArrayList<T> {
     }
 
     public void remove(int index){
+        Objects.checkIndex(index, size); //можна використати чєк індекс замість перевірки if (index>=0) ?
         for (int i = index; i <size-1 ; i++) {
             array[i]=array[i+1];
         }

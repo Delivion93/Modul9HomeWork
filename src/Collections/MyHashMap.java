@@ -7,16 +7,6 @@ public class MyHashMap<K, V> {
     private int bucketsNumber = DEFAULT_SIZE;
     private Entry<K, V>[] buckets = new Entry[bucketsNumber];
 
-    private static class Entry<K, V> {
-        K key;
-        V value;
-        Entry<K, V> next;
-
-        public Entry(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
 
     public void put(K key, V value) {
         int index = hashFunction(key);
@@ -106,5 +96,15 @@ public class MyHashMap<K, V> {
             }
         }
         return String.valueOf(sb);
+    }
+    private static class Entry<K, V> {
+        K key;
+        V value;
+        Entry<K, V> next;
+
+        public Entry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
     }
 }

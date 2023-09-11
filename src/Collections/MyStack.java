@@ -6,17 +6,8 @@ public class MyStack<T> {
     private Node<T> tail;
     private int size;
 
-    public static class Node<T> {
-        T value;
-        Node<T> next;
 
-        public Node(T value) {
-            this.value = value;
-        }
-    }
-    /**
-     * Add element to the end.
-     */
+
     public void push(T value) {
         Node<T> node = new Node<>(value);
         if (size == 0) {
@@ -98,6 +89,14 @@ public class MyStack<T> {
                 }
             }
             return String.valueOf(sb);
+        }
+    }
+    public static class Node<T> {
+        T value;
+        Node<T> next;
+
+        public Node(T value) {
+            this.value = value;
         }
     }
 

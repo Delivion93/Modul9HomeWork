@@ -6,18 +6,6 @@ public class MyLinkedList<T> {
     private Node<T> tail;
     private int size;
 
-    private static class Node<T> {
-        T value;
-        Node<T> prev;
-        Node<T> next;
-
-        public Node(T value) {
-            this.value = value;
-        }
-
-    }
-
-
     public void add(T value) {
 
         Node<T> node = new Node<>(value);
@@ -103,6 +91,16 @@ public class MyLinkedList<T> {
             }
             return String.valueOf(sb);
         }
+    }
+    private static class Node<T> {
+        T value;
+        Node<T> prev;
+        Node<T> next;
+
+        public Node(T value) {
+            this.value = value;
+        }
+
     }
 
 }
