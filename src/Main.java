@@ -8,7 +8,7 @@ public class Main {
         MyQueue<Integer> myQueue = new MyQueue<>();
         MyHashMap<Integer,String> myHashMap = new MyHashMap<>();
 
-        //Testing collections
+        //Testing collections (не встигаю закінчити наглядне тестування)
 
         myArrayList.add(1);
         myArrayList.add(2);
